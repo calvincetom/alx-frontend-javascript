@@ -1,11 +1,11 @@
 export default function taskBlock(trueOrFalse) {
-    const task = false; // Use const because task is never reassigned
-    const task2 = true; // Use const because task2 is never reassigned
+    const task = false;
+    const task2 = true;
   
     if (trueOrFalse) {
-      // No reassignment inside the block, as const prevents that.
+      const task = true; // eslint-disable-line no-unused-vars
+      const task2 = false; // eslint-disable-line no-unused-vars
     }
   
-    return [task, task2]; // Return the original values
+    return [task, task2];
   }
-  
